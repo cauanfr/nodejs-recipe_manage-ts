@@ -10,5 +10,5 @@ export class Ingredient {
   name: string;
 
   @OneToMany(() => IngredientsRecipes, (ir) => ir.ingredient)
-  ingredientsRecipes: Array<IngredientsRecipes>;
+  ingredientRecipes: Array<IngredientsRecipes>;
 }

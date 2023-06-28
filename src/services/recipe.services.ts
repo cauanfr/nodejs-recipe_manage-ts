@@ -8,7 +8,7 @@ import {
   recipeRepository,
   userRepository,
 } from "../repositories";
-import { recipeReturnSchema, recipeSchema } from "../schemas";
+import { recipeReturnSchema } from "../schemas";
 
 const create = async (
   { categories, ingredients, ...payload }: RecipeCreate,
@@ -45,8 +45,8 @@ const create = async (
     } else {
       await ingredientsRecipesRepository.save({
         details,
-        ingredient: foundIngredient,
         recipe,
+        ingredient: foundIngredient,
       });
     }
   }

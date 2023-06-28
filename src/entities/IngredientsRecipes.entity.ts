@@ -10,9 +10,9 @@ export class IngredientsRecipes {
   @Column({ type: "text" })
   details: string;
 
-  @ManyToOne(() => Recipe, (r) => r.ingredientsRecipes)
+  @ManyToOne(() => Recipe, (r) => r.ingredientRecipes)
   recipe: Recipe;
 
-  @ManyToOne(() => Ingredient, (i) => i.ingredientsRecipes)
+  @ManyToOne(() => Ingredient, (r) => r.ingredientRecipes)
   ingredient: Ingredient;
 }

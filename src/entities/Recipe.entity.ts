@@ -13,7 +13,6 @@ import {
 import { User } from "./User.entity";
 import { Category } from "./Category.entity";
 import { IngredientsRecipes } from "./IngredientsRecipes.entity";
-import { Ingredient } from "./Ingredient.entity";
 
 @Entity("recipes")
 export class Recipe {
@@ -43,5 +42,5 @@ export class Recipe {
   categories: Array<Category>;
 
   @OneToMany(() => IngredientsRecipes, (ir) => ir.recipe)
-  ingredientsRecipes: Array<IngredientsRecipes>;
+  ingredientRecipes: Array<IngredientsRecipes>;
 }
